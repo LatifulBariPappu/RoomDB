@@ -7,7 +7,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
+
+import java.util.List;
 
 public class FetchDataActivity extends AppCompatActivity {
     RecyclerView recyclerView;
@@ -19,5 +23,18 @@ public class FetchDataActivity extends AppCompatActivity {
 
         recyclerView=findViewById(R.id.recyclerview);
 
+        fetchRoomData();
+
+    }
+
+    private void fetchRoomData() {
+        AppDatabase db = Room.databaseBuilder(getApplicationContext(),
+                AppDatabase.class, "room_db").allowMainThreadQueries().build();
+        UserDao userDao=db.userDao();
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        List<User> userList=userDao.getAll();
+        UserAdapter userAdapter=new UserAdapter(userList);
+        recyclerView.setAdapter(userAdapter);
     }
 }
