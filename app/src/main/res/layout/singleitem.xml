@@ -2,30 +2,36 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp"
     android:layout_margin="10dp"
-    android:background="#E4E4E4"
     android:orientation="horizontal">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/tv_user_id"
-        android:textSize="22sp"
+        android:padding="10dp"
+        android:textSize="18sp"
         android:id="@+id/tvuid"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:textSize="18sp"
         android:hint="@string/Tvfirst_name"
         android:id="@+id/tvufname"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:hint="@string/Tvlastname"
-        android:textSize="22sp"
+        android:textSize="18sp"
         android:id="@+id/tvulname"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/delBtn"
+        android:padding="10dp"
+        android:src="@drawable/baseline_delete_24"/>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

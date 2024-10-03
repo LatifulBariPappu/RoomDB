@@ -22,6 +22,6 @@ public interface UserDao {
     @Insert
     void insertAll(User... users);
 
-    @Delete
-    void delete(User user);
+    @Query("DELETE FROM User WHERE uid = :id")
+    void delete(int id);
 }
