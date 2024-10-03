@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RoomDB</string>
+    <string name="user_id">User id</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last Name</string>
+    <string name="save_to_room">Save to room</string>
+    <string name="fetch_data">Fetch data</string>
+    <string name="Tvlastname">Last name</string>
+    <string name="Tvfirst_name">First name</string>
+    <string name="tv_user_id">User id</string>
+</resources>
